@@ -53,7 +53,7 @@ void disp_NewLine() {
 }
 
 
-int readCommand(char* input){ // read user input and execute exit command
+int read_command(char* input){ // read user input and execute exit command
 
     // read user input conatining a command and its arguments
     char* err = fgets(input, INPUT_SIZE, stdin);
@@ -79,6 +79,8 @@ void execute_cmd(char *command){
             strcat(command_path, command);
             execlp(command_path, command, (char *)NULL);
             */
+            // We used this code for previous questions (execution of commands calling no arguments)
+            
             execlp("sh", "sh", "-c", command, (char *)NULL); // execution of a command that takes arguments
 
             // in case the execution fails
@@ -114,7 +116,7 @@ int main(){
     while(1){
         
         // "command" receives user input and make sure there is no input error
-        int input_error = readCommand(command);
+        int input_error = read_command(command);
         
         // exit if the user types 'exit' or in case of input error
         if (input_error || strcmp(command, "exit") == 0) {
