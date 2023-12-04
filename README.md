@@ -1,20 +1,22 @@
-# Lab Report for ENSEASH Shell
+# Lab Report for TPSP1 : ENSEASH Shell
+
+This project was made by Aurélien POINSEL and Aliénor D'IRUMBERRY DE SALABERRY
 
 ## Overview
-This project, titled ENSEASH Shell, is a simple shell implementation developed in C. The shell is designed to execute commands, provide information about their execution, and support various features such as command execution with arguments, exit status display, and time measurement.
+This project, titled ENSEASH Shell, is a simple shell implementation developed in C. The shell is designed to execute commands, provide information about their execution, and support various features such as command execution with arguments, exit status display, time measurement, and more.
 
 ## Project Structure
-The project consists of a single C file, `enseash.c`, implementing the ENSEASH Shell. The code is well-organized and divided into functions to enhance readability and maintainability. The main components include:
+The project consists of a single C file, `enseash.c`, implementing the ENSEASH Shell. The code is organized, commented and divided into functions to enhance readability. At the end of the 2nd lab, the main components include:
 
+- **disp_NewLine():** Writes a new line character to the shell.
 - **display_welcome():** Displays a welcome message upon launching the shell.
 - **display_prompt():** Generates and displays the prompt, including exit status, signal, and execution time.
-- **enseash_exit():** Displays a farewell message when exiting the shell.
-- **disp_NewLine():** Writes a new line character to the shell.
+- **enseash_exit():** Displays a goodbye message when exiting the shell.
 - **readCommand():** Reads user input, ensuring no errors occur, and handles the exit command.
 - **execute_cmd():** Executes the entered command, capturing information such as exit status and execution time.
 
 ## Features
-The ENSEASH Shell supports various features as outlined in the project specifications:
+Our ENSEASH Shell supports various features as required by the lab specifications:
 
 1. **Welcome Message and Prompt:** Displays a welcome message and provides a user-friendly prompt.
 
@@ -28,22 +30,22 @@ The ENSEASH Shell supports various features as outlined in the project specifica
 
 6. **Executing Complex Commands:** Handles commands with arguments seamlessly.
 
-7. **Redirections with `<` and `>`:** Manages input and output redirection.
+These are all the features we could implement during the labs. We couldn't manage to finalize our project in time, but the result remains very satisfying. The execution and appearance of our shell seem flawless, and our final code is really clean.
 
-8. **Pipe Redirection with `|`:** Implements pipe redirection to connect the output of one command to the input of another.
+## Potential enhancements
+While the project meets the requirements previously mentionned, here are several ways to improve it:
 
-9. **Running Commands in the Background with `&`:** Supports running commands in the background, displaying immediate prompts.
+1. The project specifications expected more options, such as :
+- Redirections with `<` and `>`: Manages input and output redirection.
+- Pipe Redirection with `|`: Implements pipe redirection to connect the output of one command to the input of another.
+- Running Commands in the Background with `&`: Supports running commands in the background, displaying immediate prompts.
 
-## Recommendations
-While the project meets the specified requirements, there are some potential enhancements:
+2. Code comments and documentation:
+- Though generally well commented, adding comments for complex sections or algorithms can further improve code understanding.
+- We could also add documentation to explain the purpose and usage of specific functions or sections of code (for example : execute_cmd() plays a huge role in the program and could deserve some documentation).
 
-- **Error Handling:** The code could benefit from additional error handling, such as validating user input for potential errors.
-
-- **Code Comments:** Though generally well-commented, adding comments for complex sections or algorithms can further improve code understanding.
-
-- **Documentation:** Consider adding inline documentation to explain the purpose and usage of specific functions or sections of code.
+3. Error Handling: This is hard to estimate as our shell runs really well, but our code could probobably benefit from additional error handlers to manage every possible cases and situations.
 
 ## Conclusion
-The ENSEASH Shell is a functional and well-implemented micro shell with support for essential features. It provides a solid foundation for further development and learning in the realm of shell programming. The code is clean, adheres to coding standards, and demonstrates proficiency in C programming.
+Our ENSEASH Shell is a functional micro shell supporting many essential features. It provides a solid foundation for further development, and its conception taught us a lot about shell programming. We also tried our best to produce a clean code that is easily readable, and we undoubtly achieved more proficiency in C programming.
 
-Feel free to explore, enhance, and customize the ENSEASH Shell to meet your specific needs. If you have any questions or need assistance, don't hesitate to reach out. Happy coding!
